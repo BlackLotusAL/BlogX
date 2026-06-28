@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>「拾光集」</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./assets/xlsx.full.min.js"></script>
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <section class="gallery-cover" aria-label="社区公告图">
+      <img src="./assets/gallery-cover.png?v=2" alt="星空下的人物指向划过夜空的光轨" />
+    </section>
+
+    <main class="page-shell">
+      <section class="intro" aria-labelledby="page-title">
+        <div>
+          <h1 id="page-title">「拾光集」</h1>
+        </div>
+
+      </section>
+
+      <nav id="monthNav" class="month-nav" aria-label="月份"></nav>
+
+      <section class="count-row" aria-live="polite">
+        <span class="count-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z" />
+            <path d="M14 2v5h5" />
+          </svg>
+        </span>
+        <span id="countText">正在读取文章...</span>
+      </section>
+
+      <section id="articleList" class="article-list" aria-live="polite"></section>
+
+      <section id="emptyState" class="empty-state" hidden>
+        <h2>未找到可展示的文章</h2>
+        <p>当前月份没有符合表头的文章记录。</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 知识社区</span>
+    </footer>
+  </body>
+</html>
+
